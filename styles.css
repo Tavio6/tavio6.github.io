@@ -25,7 +25,7 @@ h1 {
 h3 {
     color: #ffffff;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 p {
@@ -33,6 +33,15 @@ p {
     font-size: 1.1em;
     text-align: center;
     font-weight: bolder;
+}
+
+a {
+    display: block;
+    line-height: 1.6;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: -20px;
 }
 
 br {
@@ -48,9 +57,20 @@ br {
         font-size: 2em;
     }
 
+    h3 {
+        font-size: 1.2em;
+    }
+
     p {
         font-size: 1em;
     }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
 }
 
 #subtitle{
@@ -59,4 +79,31 @@ br {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+}
+
+#projecttitle{
+    font-size: 0.95em;
+}
+
+.button-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers the button vertically */
+  }
+
+.toggleButton {
+    padding: 10px 20px; /* Adds some space inside the button */
+    background-color: #6057dd; /* A pleasant green color for the button */
+    color: white; /* Ensures the text is readable on the green background */
+    font-weight: bold; /* Makes the text bolder */
+    border: none; /* Removes the default border */
+    border-radius: 25px; /* Makes the corners fully rounded */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a 3D effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.toggleButton:hover {
+    background-color: #45a049; /* A slightly darker green on hover */
+    transform: scale(1.05); /* Slightly increases the size on hover */
 }

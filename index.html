@@ -1,47 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tavi's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <style>
-        body {
-            background-image: url('assets/stellarBackground.jpg');
-            
-            background-repeat: repeat;
-
-            background-color: #212121;
-            background-position: top left;
-            background-size: auto;
-        }
-    </style>
+  <title>Tavi's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('assets/stellarBackground.jpg');
+      background-repeat: repeat;
+      background-color: #212121;
+      background-position: top left;
+      background-size: auto;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <section>
-        <h1>Hello World!</h1>
-        <p id="subtitle">(experience)</p>
-        <p>I am Tavi, a long time Game Developer with 
-            over 7+ years of Experience<br> (as of 2025), 
-            especially on Unity and
-            Godot, and as of recently with close to 3 years of 
-            Experience with Roblox.<br>
-            I'm mostly a Generalist with a specialization in 3D
-            and 2D art, but i can do many other things as well,
-            such as scripting, especially with Python, Luau, C#
-            and C++, i've been at it since i was 11, so i am 
-            pretty confident with tackling with most complex of
-            problems!<br>
-            Below you can see some of the projects i 
-            have worked on.
-        </p>
-    </section>
+  <section>
+    <h1>Hello World!</h1>
+    <p id="subtitle">(experience)</p>
+    <p>
+      I am Tavi, a long time Game Developer with over 7+ years of Experience<br>
+      (as of 2025), especially on Unity and Godot, and as of recently with close to 3 years of 
+      Experience with Roblox.<br>
+      I'm mostly a Generalist with a specialization in 3D and 2D art, but I can do many other 
+      things as well, such as scripting, especially with Python, Luau, C# and C++, I've been at it 
+      since I was 11, so I am pretty confident with tackling most complex problems!<br>
+      Below you can see some of the projects I have worked on.
+    </p>
+  </section>
 
-    <section>
-        <h1>Projects</h1>
-        <p id="subtitle">(sorted by most recent)</p>
-        <div>
-            <h3>First Half of 2025</h3>
-        </div>
-    </section>
+  <section>
+    <h1>Projects</h1>
+    <p id="subtitle">(sorted by most recent)</p>
+    <div>
+      <h3>Notable Projects <br>(more to come soon, i can't find them all 💀)</h3>
+      <p class="projecttitle">Tavi's Massive Strategy Game</p>
+      <div class="button-container">
+        <button class="toggleButton">Show More</button>
+      </div>      
+      <div class="project-images hidden">
+        <img src="assets/projects/tavismassivestrategygame.webp" alt="Tavi's Massive Strategy Game">
+      </div>
+      <p class="projecttitle">Connections Finder</p>
+      <div class="button-container">
+        <button class="toggleButton">Show More</button>
+      </div>      
+      <div class="project-images hidden">
+        <img src="assets/projects/connectionsfinder.png" alt="Connections Finder">
+      </div>
+      <p class="projecttitle">Terraform!</p>
+      <div class="button-container">
+        <button class="toggleButton">Show More</button>
+      </div>      
+      <div class="project-images hidden">
+        <img src="assets/projects/terraform.png" alt="Connections Finder">
+      </div>
+      <p class="projecttitle">Stork Express</p>
+      <div class="button-container">
+        <button class="toggleButton">Show More</button>
+      </div>      
+      <div class="project-images hidden">
+        <img src="assets/projects/storkexpress.png" alt="Connections Finder">
+      </div>
+      <p class="projecttitle">Drifter</p>
+      <div class="button-container">
+        <button class="toggleButton">Show More</button>
+      </div>      
+      <div class="project-images hidden">
+        <img src="assets/projects/drifter.png" alt="Connections Finder">
+      </div>
+      <p class="projecttitle">Ghost</p>
+      <div class="button-container">
+        <button class="toggleButton">Show More</button>
+      </div>      
+      <div class="project-images hidden">
+        <img src="assets/projects/ghost.png" alt="Connections Finder">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1>Extra Info</h1>
+    <p id="subtitle">(...)</p>
+    <p>Youtube:</p>
+    <a href="https://www.youtube.com/@bluehorizon2006">https://www.youtube.com/@bluehorizon2006</a>
+    <p>Roblox</p>
+    <a href="https://www.roblox.com/users/7532623623/profile">https://www.roblox.com/users/7532623623/profile</a>
+    <p>Discord</p>
+    <a href="https://discord.gg/uFXzZmVP6V">https://discord.gg/uFXzZmVP6V</a>
+  </section>
+
+  <script>
+    const toggleButtons = document.querySelectorAll('.toggleButton');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const projectContainer = button.parentElement.nextElementSibling;
+            projectContainer.classList.toggle('hidden');
+            
+            if (projectContainer.classList.contains('hidden')) {
+                button.textContent = 'Show More';
+            } else {
+                button.textContent = 'Show Less';
+            }
+        });
+    });
+  </script>
 </body>
 </html>
